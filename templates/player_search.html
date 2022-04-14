@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src = "d3.min.js"></script>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src = "/static/d3.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/static/style.css">
+
 	<title>Player search</title>
-    <a href = "/">Go back.</a>
+    <a class="link" href = "/">Go back.</a>
 </head>
-    <a>Search for a player!</a>
-        <form action="/search_submit" method="post">
-            <label for="name">Enter a player name: </label>
+    <div class="container">
+        <h2>Search for a player!</h2>
+            <form action="/search_submit" method="post">
+            <label class ="text" for="name">Enter a player name: </label>
             <input type="text" name="name" required>
                 <div class="submit">
             <input type="submit" value="Search">
+            <img class="img" src="/static/coverart.jpg" />
                 </div>
-        </form>
+            </form>
+    </div>
 </html>
