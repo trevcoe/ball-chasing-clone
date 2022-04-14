@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Bebas Neue', cursive;
+    src: url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
+}
+
+h1 {
+    font-family: 'Bebas Neue';
+}
+
+body {
+    background-color: #f6f0c6;
+}
+
+img {
+    opacity: 0.2;
+}
