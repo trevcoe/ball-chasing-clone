@@ -4,7 +4,8 @@ from requests.auth import HTTPBasicAuth
 import requests
 
 app = Flask(__name__)
-# My auth key. Necessary for api request: CnJUSLjs9yT3mMjZZSHkSyt0ZjwgrFHqqPA0bp5C
+# My auth key. Necessary for api request: CnJUSLjs9yT3mMjZZSHkSyt0ZjwgrFHqqPA0bp5C.
+# New auth keys can be obtained by making an account on ballchasing.com.
 
 # Landing page for app. Contains routes to view other features. 
 @app.route("/")
@@ -17,22 +18,18 @@ if __name__ == '__main__':
 # Route to view replays
 @app.route("/replays")
 def response1():
-    response = requests.get('https://ballchasing.com/api/replays',
+    response = requests.get('https://ballchasing.com/api/replays/', 
     headers = {'Authorization':'CnJUSLjs9yT3mMjZZSHkSyt0ZjwgrFHqqPA0bp5C'})
-   
-    # convert data to dict
-    data = json.loads(response.text)
-
-    # Convert dict to string
-    data = json.dumps(data)
-    return data
+    data = response.json()
+    return render_template("replays.html", data=data)
 
 # Route to view a pro replay
 @app.route('/request_pro')
 def response2():
     response = requests.get('https://ballchasing.com/api/replays/?pro=true', 
     headers = {'Authorization':'CnJUSLjs9yT3mMjZZSHkSyt0ZjwgrFHqqPA0bp5C'})
-    return response.json()
+    data = response.json()
+    return render_template("pro_replays.html", data=data)
     
 # Renders HTML for player search
 @app.route('/player_search')
@@ -46,4 +43,5 @@ def response4():
         param = request.form.get("name")
     response = requests.get('https://ballchasing.com/api/replays/?player-name='+param,
     headers = {'Authorization':'CnJUSLjs9yT3mMjZZSHkSyt0ZjwgrFHqqPA0bp5C'})
-    return response.json()
+    data = response.json()
+    return render_template("search_submit.html", data=data)

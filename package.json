@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/trevcoe/ball-chasing/issues"
   },
-  "homepage": "https://github.com/trevcoe/ball-chasing#readme"
+  "homepage": "https://github.com/trevcoe/ball-chasing#readme",
+  "dependencies": {
+    "datatables.net": "^1.11.5",
+    "datatables.net-dt": "^1.11.5"
+  }
 }
