@@ -23,7 +23,7 @@ My website returns three things.
 3. Player search. This feature lets the user put in a name, and if that name is in any replay file (up to 10000 replays) it gets returned. 
 
 I chose these features because they were easy to implement, and this is my first true website. 
-The main tool I used was flask. I used python for most of the logic, and a ton of html to display different pages. There is a tiny amount of JS in the htmls to render the replay data.
+The main tool I used was flask. I used python for most of the logic, and a ton of html to display different pages.
 
 Organizing the data is still unfinished for now. Using something like json vue makes the data slightly easier to read. 
 I would like to finish this in the future. 
