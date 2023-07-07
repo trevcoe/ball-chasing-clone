@@ -9,10 +9,7 @@ I'm attempting to get as many features in the project as possible within a week.
 
 api: https://ballchasing.com/doc/api#top
 
-
-*1 week later*
-
-I haven't deployed the site, and there are still some features I'd like to implement. This is what I have now, though.
+.
 
 The website is similar to a real website, ballchasing.com. Ballchasing.com accepts user file uploads called "replays" from a video game named "Rocket league". It then returns a bunch of information thats contained in the file. This includes player names, dates, goals, etc, etc. There is a ton of data. 
 
